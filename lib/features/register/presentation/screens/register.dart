@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/constant/text_style_constants.dart';
 import '../../../../core/services/firebase_authentication_service.dart';
 import '../../../../injection_container.dart';
+import '../../../login/presentation/screens/login.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -68,15 +69,18 @@ class _RegisterState extends State<Register> {
                 password: passwordController.text,
                 displayName: fullNameController.text,
               );
-              if (user != null) {}
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                if (user != null) {
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (context) => const Login(),
+                    ),
+                  );
+                }
+              });
             },
           )
-          // TODO: update this to listen for firebase auth changes
-          //  Navigator.of(context).pushReplacement(
-          //           MaterialPageRoute(
-          //             builder: (context) => const Login(),
-          //           ),
-          //         );
+          // TODO: update above  to listen for firebase auth changes
         ],
       ),
     );
