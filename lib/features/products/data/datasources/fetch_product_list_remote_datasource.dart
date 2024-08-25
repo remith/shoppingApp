@@ -1,5 +1,4 @@
 import 'package:dartz/dartz.dart';
-import 'package:shopping_app/core/error/exceptions.dart';
 import 'package:shopping_app/features/products/data/models/product_model.dart';
 import 'package:shopping_app/features/products/domain/entities/product.dart';
 
@@ -21,8 +20,7 @@ class FetchProductListRemotedataSourceImplementation
     final response =
         await netwrokClient.get(apiUrl: '${ApiConstants.baseUrl}products');
     return response.fold(
-      (failure) =>
-          const Left(APIFailure(message: 'Unable to fetch data, try again')),
+      (failure) => Left(failure),
       (success) => Right(
         ProductModel.fromStringList(
           success!.isNotEmpty ? success : [],

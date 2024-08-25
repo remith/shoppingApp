@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/constant/text_style_constants.dart';
 import '../../../../core/services/firebase_authentication_service.dart';
+import '../../../../core/utils/validators.dart';
 import '../../../../injection_container.dart';
 import '../../../login/presentation/screens/login.dart';
 
@@ -47,11 +48,17 @@ class _RegisterState extends State<Register> {
           CustomTextFormField(
             labelText: RegisterConstants.firstName,
             controller: fullNameController,
+            validator: (value) => ValidationUtil.validateRequiredField(
+              value,
+              RegisterConstants.firstName,
+            ),
           ),
           const SizedBox(height: 13),
           CustomTextFormField(
             labelText: SharedConstants.emailAddress,
             controller: emailController,
+            keyboardType: TextInputType.emailAddress,
+            validator: (value) => ValidationUtil.validateEmail(value),
           ),
           const SizedBox(height: 13),
           CustomTextFormField(

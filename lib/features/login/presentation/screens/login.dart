@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/constant/shared_constants.dart';
 import '../../../../core/services/firebase_authentication_service.dart';
+import '../../../../core/utils/validators.dart';
 import '../../../../core/widgets/custom_filled_button.dart';
 import '../../../../core/widgets/custom_text_form_filed.dart';
 import '../../../../core/widgets/main_scaffold.dart';
@@ -46,12 +47,14 @@ class _LoginState extends State<Login> {
                 CustomTextFormField(
                   controller: emailController,
                   labelText: SharedConstants.emailAddress,
+                  validator: (value) => ValidationUtil.validateEmail(value),
                 ),
                 const SizedBox(height: 16),
                 CustomTextFormField(
                   controller: passwordController,
                   labelText: SharedConstants.password,
                   isMaskedText: true,
+                  validator: (value) => ValidationUtil.validatePassword(value),
                 ),
                 const SizedBox(height: 56),
                 CustomFilledButton(

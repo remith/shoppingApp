@@ -51,8 +51,8 @@ class _ProductsScreenState extends State<ProductsScreen> {
               return const ListTileLoader();
             } else if (state is ProductsLoadFailure) {
               return RetryContainer(
-                message: 'Unable to Load, please try again',
-                onRetry: () {},
+                message: state.message ?? 'Unable to Load, please try again',
+                onRetry: productsCubit.fetchProductList,
               );
             } else if (state is ProductsLoaded) {
               final products = state.products;

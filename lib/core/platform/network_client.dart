@@ -71,8 +71,9 @@ class NetwrokClient {
     } catch (e) {
       return Left(
         APIFailure(
-          message:
-              e is ServerException ? e.message : 'Unknown exception, try again',
+          message: e is FormatException
+              ? '${e.source} ${e.message}'
+              : 'Unknown exception, try again',
         ),
       );
     }
