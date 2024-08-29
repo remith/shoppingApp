@@ -130,9 +130,9 @@ class _CartScreenState extends State<CartScreen> {
                                 IconButton(
                                   icon: const Icon(Icons.delete),
                                   color: Colors.red,
-                                  onPressed: () {
-                                    //TODO:  Handle item removal from cart
-                                  },
+                                  onPressed: () => context
+                                      .read<CartCubit>()
+                                      .deleteItem(cartItem),
                                 ),
                               ],
                             ),

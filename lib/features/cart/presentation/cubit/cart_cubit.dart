@@ -68,6 +68,14 @@ class CartCubit extends Cubit<CartState> {
     emit(CartLoaded(items: updatedItems));
   }
 
+  deleteItem(CartItem cartItem) {
+    final updatedItems = List<CartItem>.from(state.items);
+
+    final index = retrieveIndexOfItem(updatedItems, cartItem);
+    updatedItems.removeAt(index);
+    emit(CartLoaded(items: updatedItems));
+  }
+
   int retrieveIndexOfItem(List<CartItem> cartItems, CartItem cartItem) {
     return cartItems
         .indexWhere((item) => item.product.id == cartItem.product.id);

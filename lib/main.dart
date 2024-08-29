@@ -4,7 +4,6 @@ import 'package:shopping_app/features/login/presentation/screens/login.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-import 'features/products/presentation/screens/products_screen.dart';
 import 'injection_container.dart' as di;
 import 'injection_container.dart';
 
