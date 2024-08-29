@@ -17,8 +17,8 @@ class FetchProductListRemotedataSourceImplementation
   FetchProductListRemotedataSourceImplementation({required this.netwrokClient});
   @override
   Future<Either<Failure, List<Product>>> fetchProductList() async {
-    final response =
-        await netwrokClient.get(apiUrl: '${ApiConstants.baseUrl}products');
+    final response = await netwrokClient.get(
+        apiUrl: '${ApiConstants.fakseStoreUrl}products');
     return response.fold(
       (failure) => Left(failure),
       (success) => Right(

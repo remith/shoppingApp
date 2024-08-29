@@ -25,6 +25,8 @@ class _RegisterState extends State<Register> {
 
   final firebaseAuthentication = sl<FirebaseAuthenticationService>();
 
+  bool loader = false;
+
   @override
   Widget build(BuildContext context) {
     return MainScaffold(
@@ -32,7 +34,7 @@ class _RegisterState extends State<Register> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
+        children: [
           const FlutterLogo(
             size: 100,
             style: FlutterLogoStyle.stacked,
@@ -67,27 +69,45 @@ class _RegisterState extends State<Register> {
             isMaskedText: true,
           ),
           const SizedBox(height: 22),
-          CustomFilledButton(
-            label: RegisterConstants.createAccount,
-            onPressed: () async {
-              final user =
-                  await firebaseAuthentication.registerWithEmailAndPassword(
-                email: emailController.text,
-                password: passwordController.text,
-                displayName: fullNameController.text,
-              );
-              WidgetsBinding.instance.addPostFrameCallback((_) {
-                if (user != null) {
-                  Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(
-                      builder: (context) => const Login(),
-                    ),
-                  );
-                }
-              });
-            },
-          )
-          // TODO: update above  to listen for firebase auth changes
+          if (!loader)
+            CustomFilledButton(
+              label: RegisterConstants.createAccount,
+              onPressed: () async {
+                setState(() {
+                  loader = true;
+                });
+
+                final user =
+                    await firebaseAuthentication.registerWithEmailAndPassword(
+                  email: emailController.text,
+                  password: passwordController.text,
+                  displayName: fullNameController.text,
+                );
+                WidgetsBinding.instance.addPostFrameCallback((_) {
+                  if (user != null) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(
+                          'Account created, please login',
+                          style: UITextStyle.body.copyWith(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    );
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (context) => const Login(),
+                      ),
+                    );
+                  } else {
+                    loader = false;
+                  }
+                });
+              },
+            )
+          else
+            const Center(child: CircularProgressIndicator())
         ],
       ),
     );
