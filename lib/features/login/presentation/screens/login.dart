@@ -1,5 +1,5 @@
 import 'package:shopping_app/core/constant/text_style_constants.dart';
-import 'package:shopping_app/features/products/presentation/screens/products_screen.dart';
+
 import 'package:shopping_app/features/register/presentation/screens/register.dart';
 import 'package:flutter/material.dart';
 
@@ -69,11 +69,11 @@ class _LoginState extends State<Login> {
 
                       if (user != null) {
                         WidgetsBinding.instance.addPostFrameCallback((_) {
-                          Navigator.of(context).pushReplacement(
-                            MaterialPageRoute(
-                              builder: (context) => const ProductsScreen(),
-                            ),
-                          );
+                          // Navigator.of(context).pushReplacement(
+                          //   MaterialPageRoute(
+                          //     builder: (context) => const ProductsScreen(),
+                          //   ),
+                          // );
                         });
                       }
                     }
