@@ -1,4 +1,4 @@
-import 'package:shopping_app/features/login/domain/entities/user.dart';
+import 'package:rick_and_morty/features/login/domain/entities/user.dart';
 
 class UserModel extends User {
   const UserModel({

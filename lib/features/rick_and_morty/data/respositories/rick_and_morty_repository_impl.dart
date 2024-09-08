@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 
-import 'package:shopping_app/core/error/failure.dart';
+import 'package:rick_and_morty/core/error/failure.dart';
 
-import 'package:shopping_app/features/rick_and_morty/domain/entities/character.dart';
+import 'package:rick_and_morty/features/rick_and_morty/domain/entities/character.dart';
 
 import '../../domain/repositories/rick_and_morty_repository_protocol.dart';
 import '../datasources/rick_and_morty_remote_data_source.dart';

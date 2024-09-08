@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:shopping_app/features/rick_and_morty/domain/entities/episode.dart';
+import 'package:rick_and_morty/features/rick_and_morty/domain/entities/episode.dart';
 
 class Character extends Equatable {
   final String id;

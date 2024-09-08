@@ -1,6 +1,6 @@
 {
-    "name": "shopping_app",
-    "short_name": "shopping_app",
+    "name": "rick_and_morty",
+    "short_name": "rick_and_morty",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

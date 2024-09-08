@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
-import 'package:shopping_app/core/constant/api_endpoint.dart';
+import 'package:rick_and_morty/core/constant/api_endpoint.dart';
 
 import '../error/failure.dart';
 

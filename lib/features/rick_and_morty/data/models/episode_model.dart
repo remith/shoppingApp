@@ -11,9 +11,9 @@ class EpisodeModel extends Episodes {
 
   factory EpisodeModel.fromJson(Map<String, dynamic> json) {
     return EpisodeModel(
-      episode: json['episode'],
-      createdDate: json['createdDate'],
-      airDate: json['airDate'],
+      episode: json['episode'] ?? '',
+      createdDate: json['created'],
+      airDate: json['air_date'],
       name: json['name'],
       id: json['id'],
     );

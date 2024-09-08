@@ -1,8 +1,8 @@
-import 'package:shopping_app/core/constant/shared_constants.dart';
-import 'package:shopping_app/core/widgets/custom_filled_button.dart';
-import 'package:shopping_app/core/widgets/custom_text_form_filed.dart';
-import 'package:shopping_app/core/widgets/main_scaffold.dart';
-import 'package:shopping_app/features/register/constants/register_constants.dart';
+import 'package:rick_and_morty/core/constant/shared_constants.dart';
+import 'package:rick_and_morty/core/widgets/custom_filled_button.dart';
+import 'package:rick_and_morty/core/widgets/custom_text_form_filed.dart';
+import 'package:rick_and_morty/core/widgets/main_scaffold.dart';
+import 'package:rick_and_morty/features/register/constants/register_constants.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/constant/text_style_constants.dart';

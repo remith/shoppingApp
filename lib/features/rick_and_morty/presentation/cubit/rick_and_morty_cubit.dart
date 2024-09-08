@@ -1,7 +1,7 @@
 // import 'package:bloc/bloc.dart';
 // import 'package:equatable/equatable.dart';
-// import 'package:shopping_app/core/usecases/params.dart';
-// import 'package:shopping_app/features/rick_and_morty/domain/usecases/fetch_characters_usecase.dart';
+// import 'package:rick_and_morty/core/usecases/params.dart';
+// import 'package:rick_and_morty/features/rick_and_morty/domain/usecases/fetch_characters_usecase.dart';
 
 // import '../../../../core/error/failure.dart';
 // import '../../domain/entities/character.dart';

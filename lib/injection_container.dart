@@ -1,4 +1,4 @@
-import 'package:shopping_app/core/platform/rest_api_client.dart';
+import 'package:rick_and_morty/core/platform/rest_api_client.dart';
 
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;

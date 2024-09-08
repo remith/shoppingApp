@@ -1,4 +1,4 @@
-import 'package:shopping_app/features/register/domain/entities/register.dart';
+import 'package:rick_and_morty/features/register/domain/entities/register.dart';
 
 class RegisterUserModel extends RegisterUser {
   const RegisterUserModel({

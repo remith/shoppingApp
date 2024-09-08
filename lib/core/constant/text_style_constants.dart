@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:shopping_app/core/constant/colors.dart';
+import 'package:rick_and_morty/core/constant/colors.dart';
 import 'package:flutter/material.dart';
 
 class UITextStyle {

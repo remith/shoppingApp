@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:shopping_app/core/usecases/usecase.dart';
-import 'package:shopping_app/features/rick_and_morty/domain/entities/character.dart';
+import 'package:rick_and_morty/core/usecases/usecase.dart';
+import 'package:rick_and_morty/features/rick_and_morty/domain/entities/character.dart';
 
 import '../../../../core/error/failure.dart';
 import '../repositories/rick_and_morty_repository_protocol.dart';

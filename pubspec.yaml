@@ -1,5 +1,5 @@
-name: shopping_app
-description: "A new Flutter project."
+name: rick_and_morty
+description: "A Graphql sample implementation project."
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
@@ -44,6 +44,7 @@ flutter:
 
   assets:
     - assets/general/
+    - assets/queries/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

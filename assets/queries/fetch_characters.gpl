@@ -1,0 +1,7 @@
+query FetchCharacters {
+  characters {
+    id
+    name
+    species
+  }
+}

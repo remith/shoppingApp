@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:shopping_app/core/usecases/params.dart';
+import 'package:rick_and_morty/core/usecases/params.dart';
 
 import '../../../../core/error/failure.dart';
 import '../../../../core/usecases/usecase.dart';

@@ -1,6 +1,6 @@
-import 'package:shopping_app/core/constant/text_style_constants.dart';
+import 'package:rick_and_morty/core/constant/text_style_constants.dart';
 
-import 'package:shopping_app/features/register/presentation/screens/register.dart';
+import 'package:rick_and_morty/features/register/presentation/screens/register.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/constant/shared_constants.dart';

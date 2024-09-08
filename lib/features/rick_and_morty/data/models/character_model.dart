@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:shopping_app/features/rick_and_morty/data/models/episode_model.dart';
-import 'package:shopping_app/features/rick_and_morty/domain/entities/character.dart';
+import 'package:rick_and_morty/features/rick_and_morty/data/models/episode_model.dart';
+import 'package:rick_and_morty/features/rick_and_morty/domain/entities/character.dart';
 
 class CharacterModel extends Character {
   const CharacterModel({
@@ -16,7 +16,7 @@ class CharacterModel extends Character {
   });
 
   factory CharacterModel.fromJson(Map<String, dynamic> json) {
-    var list = json['episode'] as List;
+    var list = (json['episode'] as List?) ?? [];
     List<EpisodeModel> episodeList =
         list.map((jsonMap) => EpisodeModel.fromJson(jsonMap)).toList();
 
@@ -25,10 +25,10 @@ class CharacterModel extends Character {
       image: json['image'],
       name: json['name'],
       episodes: episodeList,
-      gender: json['gender'],
-      species: json['species'],
-      status: json['status'],
-      type: json['type'],
+      gender: json['gender'] ?? '',
+      species: json['species'] ?? '',
+      status: json['status'] ?? '',
+      type: json['type'] ?? '',
     );
   }
 }

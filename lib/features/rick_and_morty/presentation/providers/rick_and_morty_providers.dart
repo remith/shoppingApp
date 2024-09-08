@@ -1,5 +1,7 @@
+import 'dart:developer';
+
 import 'package:flutter/foundation.dart';
-import 'package:shopping_app/core/usecases/params.dart';
+import 'package:rick_and_morty/core/usecases/params.dart';
 
 import '../../domain/entities/character.dart';
 import '../../domain/usecases/fetch_characters_usecase.dart';
@@ -32,6 +34,7 @@ class RickAndMortyProvider extends ChangeNotifier {
       );
     } catch (e) {
       // Handle error
+      log('$e');
     } finally {
       _isLoading = false;
       notifyListeners();
