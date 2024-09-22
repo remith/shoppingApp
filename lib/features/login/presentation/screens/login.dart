@@ -1,15 +1,11 @@
-import 'package:shopping_app/core/constant/text_style_constants.dart';
+import 'package:core/core.dart';
 import 'package:shopping_app/features/products/presentation/screens/products_screen.dart';
 import 'package:shopping_app/features/register/presentation/screens/register.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/constant/shared_constants.dart';
 import '../../../../core/services/firebase_authentication_service.dart';
-import '../../../../core/utils/validators.dart';
-import '../../../../core/widgets/custom_filled_button.dart';
-import '../../../../core/widgets/custom_text_form_filed.dart';
-import '../../../../core/widgets/main_scaffold.dart';
 import '../../../../injection_container.dart';
+
 import '../../constants/login_constants.dart';
 
 class Login extends StatefulWidget {

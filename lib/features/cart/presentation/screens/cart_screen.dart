@@ -1,10 +1,7 @@
-import 'dart:developer';
-
+import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shopping_app/core/widgets/retry_container.dart';
 
-import '../../../../core/constant/text_style_constants.dart';
 import '../cubit/cart_cubit.dart';
 
 class CartScreen extends StatefulWidget {

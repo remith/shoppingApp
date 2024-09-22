@@ -1,7 +1,5 @@
+import 'package:core/core.dart';
 import 'package:dartz/dartz.dart';
-import 'package:shopping_app/core/error/failure.dart';
-import 'package:shopping_app/core/usecases/params.dart';
-import 'package:shopping_app/core/usecases/usecase.dart';
 
 import '../entities/product.dart';
 import '../repositories/fetch_product_list_reposiroty.dart';

@@ -1,14 +1,14 @@
-import 'package:shopping_app/core/constant/shared_constants.dart';
-import 'package:shopping_app/core/widgets/custom_filled_button.dart';
-import 'package:shopping_app/core/widgets/custom_text_form_filed.dart';
-import 'package:shopping_app/core/widgets/main_scaffold.dart';
+import 'package:core/constants.dart';
+import 'package:core/utils/validators.dart';
+import 'package:core/widgets.dart';
+
 import 'package:shopping_app/features/register/constants/register_constants.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/constant/text_style_constants.dart';
 import '../../../../core/services/firebase_authentication_service.dart';
-import '../../../../core/utils/validators.dart';
+
 import '../../../../injection_container.dart';
+
 import '../../../login/presentation/screens/login.dart';
 
 class Register extends StatefulWidget {

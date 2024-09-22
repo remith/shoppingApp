@@ -1,10 +1,9 @@
+import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shopping_app/core/widgets/list_tile_loader.dart';
-import 'package:shopping_app/core/widgets/retry_container.dart';
+
 import 'package:shopping_app/injection_container.dart';
 
-import '../../../../core/constant/text_style_constants.dart';
 import '../../../cart/presentation/cubit/cart_cubit.dart';
 import '../../../cart/presentation/widgets/my_cart.dart';
 import '../cubit/products_cubit.dart';

@@ -1,8 +1,7 @@
 import 'package:bloc/bloc.dart';
+import 'package:core/core.dart';
 import 'package:equatable/equatable.dart';
-import 'package:shopping_app/core/usecases/params.dart';
 
-import '../../../../core/error/failure.dart';
 import '../../domain/entities/product.dart';
 import '../../domain/usecases/fetch_product_list.dart';
 

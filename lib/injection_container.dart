@@ -1,4 +1,5 @@
-import 'package:shopping_app/core/platform/network_client.dart';
+import 'package:core/core.dart';
+
 import 'package:shopping_app/features/cart/presentation/cubit/cart_cubit.dart';
 import 'package:shopping_app/features/products/data/datasources/fetch_product_list_remote_datasource.dart';
 import 'package:shopping_app/features/products/data/respositories/fetch_product_list_repository_implementation.dart';

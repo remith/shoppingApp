@@ -169,6 +169,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.1"
+  core:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: "12e2ec7870546a974309fd1b51afc6a4f65a1954"
+      url: "https://github.com/remith/core.git"
+    source: git
+    version: "0.0.1"
   crypto:
     dependency: transitive
     description:
@@ -561,7 +570,7 @@ packages:
     source: hosted
     version: "1.0.4"
   shimmer:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: shimmer
       sha256: "5f88c883a22e9f9f299e5ba0e4f7e6054857224976a5d9f839d4ebdc94a14ac9"

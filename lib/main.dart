@@ -26,6 +26,7 @@ class ShoppingApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Shopping App',
       theme: ThemeData(
+        primaryColor: const Color(0XFF011993),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),

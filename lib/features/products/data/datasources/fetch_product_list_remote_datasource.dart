@@ -1,10 +1,7 @@
+import 'package:core/core.dart';
 import 'package:dartz/dartz.dart';
 import 'package:shopping_app/features/products/data/models/product_model.dart';
 import 'package:shopping_app/features/products/domain/entities/product.dart';
-
-import '../../../../core/constant/api_endpoint.dart';
-import '../../../../core/error/failure.dart';
-import '../../../../core/platform/network_client.dart';
 
 abstract class FetchProductListRemotedataSource {
   Future<Either<Failure, List<Product>>> fetchProductList();
