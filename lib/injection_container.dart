@@ -9,8 +9,6 @@ import 'package:shopping_app/features/products/presentation/cubit/products_cubit
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;
 
-import 'core/services/firebase_authentication_service.dart';
-
 final sl = GetIt.instance;
 
 void initializeDependencies() {
@@ -74,7 +72,7 @@ void initializeDependencies() {
     () => http.Client(),
   );
 
-  sl.registerLazySingleton(() => FirebaseAuthenticationService());
+  // sl.registerLazySingleton(() => FirebaseAuthenticationService());
 
   sl.registerLazySingleton(() => NetwrokClient());
 }

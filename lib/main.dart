@@ -1,15 +1,22 @@
+import 'dart:developer';
+
+import 'package:authentication/authentication.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shopping_app/features/cart/presentation/cubit/cart_cubit.dart';
-import 'package:shopping_app/features/login/presentation/screens/login.dart';
-import 'package:firebase_core/firebase_core.dart';
+
 import 'package:flutter/material.dart';
 
+import 'features/products/presentation/screens/products_screen.dart';
 import 'injection_container.dart' as di;
 import 'injection_container.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  // await Firebase.initializeApp();
+  await AuthenticationLibrary.initializeFirebase();
+  AuthenticationLibrary.initialize();
   di.initializeDependencies();
   runApp(BlocProvider(
     create: (context) => sl<CartCubit>(),
@@ -30,7 +37,16 @@ class ShoppingApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Login(),
+      home: Login(
+        onLoginSuccess: (User user, BuildContext context) {
+          log('$user');
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute(
+              builder: (context) => const ProductsScreen(),
+            ),
+          );
+        },
+      ),
     );
   }
 }
